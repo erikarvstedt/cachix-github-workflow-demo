@@ -5,6 +5,7 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
+    # test
     packages.${system}.default = pkgs.runCommand "test" {} ''
       echo start
       ${pkgs.coreutils}/bin/sleep 10
